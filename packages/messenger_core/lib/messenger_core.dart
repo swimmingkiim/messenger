@@ -1,7 +1,8 @@
 library messenger_core;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export './data/entities/entities.dart';
+export './data/repositories/repositories.dart';
+export './data/sources/sources.dart';
+export './domain/models/models.dart';
+export './domain/repositories/repositories.dart';
+export './domain/use_cases/use_cases.dart';
