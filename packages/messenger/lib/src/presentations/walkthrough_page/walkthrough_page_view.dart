@@ -1,6 +1,9 @@
 // flutter
 import 'package:flutter/material.dart';
 
+// themes
+import 'package:messenger/src/themes/themes.dart';
+
 class WalkthroughPageView extends StatelessWidget {
   const WalkthroughPageView({super.key});
 
@@ -50,34 +53,63 @@ class WalkthroughPageView extends StatelessWidget {
   }
 
   Widget buildGuidelineImage() {
-    return Container(
-      color: Colors.red,
+    return Image.asset(
+      'assets/images/Illustration.png',
       width: 262.0,
       height: 271.0,
     );
   }
 
   Widget buildGuidelineText() {
-    return Container(
-      color: Colors.blue,
-      width: 280.0,
-      height: 90.0,
-    );
+    return Builder(builder: (BuildContext context) {
+      return Text(
+        'Connect easily with\nyour family and friends\nover countries',
+        style: DefaultTheme.textTheme.headlineMedium,
+        textAlign: TextAlign.center,
+      );
+    });
   }
 
   Widget buildTermsAndPrivacyPolicyButton() {
-    return Container(
-      color: Colors.orange,
-      width: 148.0,
-      height: 24.0,
-    );
+    return Builder(builder: (BuildContext context) {
+      return InkWell(
+        // TODO: Implement onTap function
+        onTap: () {},
+        child: Text(
+          'Terms & Privacy Policy',
+          style: DefaultTheme.textTheme.bodyLarge,
+          textAlign: TextAlign.center,
+        ),
+      );
+    });
   }
 
   Widget buildStartMessagingButton() {
-    return Container(
-      color: Colors.pink,
-      width: 327.0,
-      height: 52.0,
-    );
+    return Builder(builder: (BuildContext context) {
+      return InkWell(
+        // TODO: Implement onTap function
+        onTap: () {},
+        child: Container(
+          width: 327.0,
+          height: 52.0,
+          alignment: Alignment.center,
+          decoration: const BoxDecoration(
+            color: DefaultTheme.brandDefault,
+            borderRadius: BorderRadius.all(
+              Radius.circular(
+                30.0,
+              ),
+            ),
+          ),
+          child: Text(
+            'Start Messaging',
+            style: DefaultTheme.textTheme.titleMedium!.copyWith(
+              color: DefaultTheme.neutralWhite,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+      );
+    });
   }
 }
