@@ -42,4 +42,49 @@ class DefaultTheme {
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
+
+  static const defaultTextStyle = TextStyle(
+    fontFamily: 'Mulish',
+    color: neutralActive,
+  );
+
+  // Typography
+  static TextTheme textTheme = TextTheme(
+    headlineLarge: defaultTextStyle.copyWith(
+      fontSize: 32.0,
+      fontWeight: FontWeight.w900,
+    ),
+    headlineMedium: defaultTextStyle.copyWith(
+      fontSize: 24.0,
+      fontWeight: FontWeight.w900,
+    ),
+    titleLarge: defaultTextStyle.copyWith(
+      fontSize: 18.0,
+      fontWeight: FontWeight.w700,
+    ),
+    titleMedium: defaultTextStyle.copyWith(
+      fontSize: 16.0,
+      fontWeight: FontWeight.w700,
+    ),
+    bodyLarge: defaultTextStyle.copyWith(
+      fontSize: 14.0,
+      fontWeight: FontWeight.w700,
+    ),
+    bodyMedium: defaultTextStyle.copyWith(
+      fontSize: 24.0,
+      fontWeight: FontWeight.w500,
+    ),
+    labelLarge: defaultTextStyle.copyWith(
+      fontSize: 12.0,
+      fontWeight: FontWeight.w500,
+    ),
+    labelMedium: defaultTextStyle.copyWith(
+      fontSize: 10.0,
+      fontWeight: FontWeight.w500,
+    ),
+    labelSmall: defaultTextStyle.copyWith(
+      fontSize: 10.0,
+      fontWeight: FontWeight.w700,
+    ),
+  );
 }
