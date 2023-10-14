@@ -23,6 +23,7 @@ flutter:
   assets:
     - fonts/
     - icons/
+    - images/
 
   fonts:
     - family: Mulish
