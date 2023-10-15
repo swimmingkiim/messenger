@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 // packages
 import 'package:flag/flag.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
 // themes
 import 'package:messenger/src/themes/themes.dart';
@@ -23,8 +25,30 @@ class VerificationPhoneNumberPageView extends StatelessWidget {
       backgroundColor: Colors.transparent,
       shadowColor: Colors.transparent,
       foregroundColor: DefaultTheme.neutralActive,
-      automaticallyImplyLeading: true,
+      leading: buildBackButton(),
     );
+  }
+
+  Widget buildBackButton() {
+    return Builder(builder: (BuildContext context) {
+      return InkWell(
+        onTap: () {
+          FocusScope.of(context).unfocus();
+          context.pop();
+        },
+        child: Container(
+          width: 24.0,
+          height: 24.0,
+          padding: const EdgeInsets.symmetric(
+            vertical: 5.99,
+            horizontal: 8.29,
+          ),
+          child: SvgPicture.asset(
+            'assets/icons/chevron_left.svg',
+          ),
+        ),
+      );
+    });
   }
 
   Widget buildBody() {
