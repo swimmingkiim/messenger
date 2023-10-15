@@ -1,6 +1,10 @@
 // flutter
 import 'package:flutter/material.dart';
+
+// packages
 import 'package:go_router/go_router.dart';
+
+// routes
 import 'package:messenger/src/routes/routes.dart';
 
 // themes
