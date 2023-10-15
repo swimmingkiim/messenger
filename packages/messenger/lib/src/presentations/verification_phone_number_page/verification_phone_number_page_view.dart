@@ -6,6 +6,9 @@ import 'package:flag/flag.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
+// routes
+import 'package:messenger/src/routes/routes.dart';
+
 // themes
 import 'package:messenger/src/themes/themes.dart';
 
@@ -185,7 +188,7 @@ class VerificationPhoneNumberPageView extends StatelessWidget {
   Widget buildContinueButton() {
     return Builder(builder: (BuildContext context) {
       return InkWell(
-        onTap: () {},
+        onTap: () => context.push(RoutePath.walkthroughVerificationPinNumber),
         child: Container(
           width: 327.0,
           height: 52.0,
