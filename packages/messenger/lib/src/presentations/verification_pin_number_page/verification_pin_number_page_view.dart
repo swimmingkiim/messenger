@@ -104,7 +104,7 @@ class VerificationPinNumberPageView extends StatelessWidget {
   Widget buildGuidelineSubTitle() {
     // TODO: Change to real phone number
     return Text(
-      'We have sent you an SMS with the code\nto +82 0000-0000-0000',
+      'We have sent you a SMS with the code\nto +82 0000-0000-0000',
       style: DefaultTheme.textTheme.bodyMedium!.copyWith(height: 2.4),
       textAlign: TextAlign.center,
     );
