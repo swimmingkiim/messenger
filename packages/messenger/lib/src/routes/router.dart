@@ -18,6 +18,15 @@ final GoRouter router = GoRouter(
       builder: (BuildContext context, GoRouterState state) {
         return const WalkthroughPage();
       },
+      routes: <RouteBase>[
+        GoRoute(
+          path: RoutePath.walkthroughVerificationPhoneNumber
+              .replaceFirst('${RoutePath.walkthrough}/', ''),
+          builder: (BuildContext context, GoRouterState state) {
+            return const VerificationPhoneNumberPage();
+          },
+        ),
+      ],
     ),
   ],
 );
