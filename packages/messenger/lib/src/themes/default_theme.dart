@@ -16,7 +16,7 @@ class DefaultTheme {
   static const neutralWeak = Color(0xFFA4A4A4);
   static const neutralDisabled = Color(0xFFADB5BD);
   static const neutralLine = Color(0xFFEDEDED);
-  static const neutralSecondaryBackground = Color(0xFFF7F7FC);
+  static const neutralOffWhite = Color(0xFFF7F7FC);
   static const neutralWhite = Color(0xFFFFFFFF);
 
   // Accent Colors
@@ -71,7 +71,7 @@ class DefaultTheme {
       fontWeight: FontWeight.w700,
     ),
     bodyMedium: defaultTextStyle.copyWith(
-      fontSize: 24.0,
+      fontSize: 14.0,
       fontWeight: FontWeight.w500,
     ),
     labelLarge: defaultTextStyle.copyWith(
