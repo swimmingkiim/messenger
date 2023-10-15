@@ -170,6 +170,7 @@ class VerificationPhoneNumberPageView extends StatelessWidget {
         ),
       ),
       child: TextField(
+        keyboardType: const TextInputType.numberWithOptions(),
         decoration: InputDecoration(
           hintText: 'Phone Number',
           hintStyle: DefaultTheme.textTheme.bodyLarge!.copyWith(
