@@ -26,6 +26,13 @@ final GoRouter router = GoRouter(
             return const VerificationPhoneNumberPage();
           },
         ),
+        GoRoute(
+          path: RoutePath.walkthroughVerificationPinNumber
+              .replaceFirst('${RoutePath.walkthrough}/', ''),
+          builder: (BuildContext context, GoRouterState state) {
+            return const VerificationPinNumberPage();
+          },
+        ),
       ],
     ),
   ],
