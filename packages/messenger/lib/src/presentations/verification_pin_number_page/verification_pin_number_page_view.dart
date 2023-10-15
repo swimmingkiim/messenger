@@ -70,6 +70,7 @@ class VerificationPinNumberPageView extends StatelessWidget {
             const SizedBox(
               height: 32.0,
             ),
+            buildNumberKeyboard(),
           ],
         ),
       );
@@ -135,6 +136,148 @@ class VerificationPinNumberPageView extends StatelessWidget {
             ),
             buildUnknownPinNumber(),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildNumberKeyboard() {
+    return Container(
+      height: 308.0,
+      color: DefaultTheme.neutralOffWhite,
+      padding: const EdgeInsets.only(
+        top: 16.0,
+        bottom: 24.0,
+        left: 14.0,
+        right: 15.0,
+      ),
+      alignment: Alignment.center,
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              buildNumberKey(1),
+              const SizedBox(
+                width: 8.0,
+              ),
+              buildNumberKey(2),
+              const SizedBox(
+                width: 8.0,
+              ),
+              buildNumberKey(3),
+            ],
+          ),
+          const SizedBox(
+            height: 12.0,
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              buildNumberKey(4),
+              const SizedBox(
+                width: 8.0,
+              ),
+              buildNumberKey(5),
+              const SizedBox(
+                width: 8.0,
+              ),
+              buildNumberKey(6),
+            ],
+          ),
+          const SizedBox(
+            height: 12.0,
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              buildNumberKey(7),
+              const SizedBox(
+                width: 8.0,
+              ),
+              buildNumberKey(8),
+              const SizedBox(
+                width: 8.0,
+              ),
+              buildNumberKey(9),
+            ],
+          ),
+          const SizedBox(
+            height: 12.0,
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              buildEmptyKey(),
+              const SizedBox(
+                width: 8.0,
+              ),
+              buildNumberKey(0),
+              const SizedBox(
+                width: 8.0,
+              ),
+              buildDeleteKey(),
+            ],
+          ),
+          const SizedBox(
+            height: 12.0,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget buildNumberKey(int number) {
+    return InkWell(
+      // TODO: Implement logic when number keypad is tapped
+      onTap: () {},
+      child: SizedBox(
+        width: 110.0,
+        height: 48.0,
+        child: Center(
+          child: Text(
+            '$number',
+            style: DefaultTheme.textTheme.headlineMedium!.copyWith(
+              color: DefaultTheme.neutralActive,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget buildEmptyKey() {
+    return const SizedBox(
+      width: 110.0,
+      height: 48.0,
+    );
+  }
+
+  Widget buildDeleteKey() {
+    return InkWell(
+      // TODO: Implement logic when delete keypad is tapped
+      onTap: () {},
+      child: SizedBox(
+        width: 110.0,
+        height: 48.0,
+        child: Center(
+          child: SvgPicture.asset(
+            'assets/icons/backspace.svg',
+            width: 32.0,
+            height: 32.0,
+          ),
         ),
       ),
     );
