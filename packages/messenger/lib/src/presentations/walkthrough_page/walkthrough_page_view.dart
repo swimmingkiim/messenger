@@ -1,5 +1,7 @@
 // flutter
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:messenger/src/routes/routes.dart';
 
 // themes
 import 'package:messenger/src/themes/themes.dart';
@@ -87,8 +89,7 @@ class WalkthroughPageView extends StatelessWidget {
   Widget buildStartMessagingButton() {
     return Builder(builder: (BuildContext context) {
       return InkWell(
-        // TODO: Implement onTap function
-        onTap: () {},
+        onTap: () => context.push(RoutePath.walkthroughVerificationPhoneNumber),
         child: Container(
           width: 327.0,
           height: 52.0,
