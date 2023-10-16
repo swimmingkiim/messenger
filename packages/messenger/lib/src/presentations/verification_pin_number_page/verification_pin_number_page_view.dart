@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
+// routes
+import 'package:messenger/src/routes/routes.dart';
+
 // themes
 import 'package:messenger/src/themes/themes.dart';
 
@@ -14,6 +17,7 @@ class VerificationPinNumberPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: buildAppBar(),
       body: buildBody(),
     );
@@ -324,7 +328,8 @@ class VerificationPinNumberPageView extends StatelessWidget {
   Widget buildResendCodeButton() {
     return Builder(builder: (BuildContext context) {
       return InkWell(
-        onTap: () {},
+        // TODO: Replace with real resend action
+        onTap: () => context.push(RoutePath.walkthroughProfileAccount),
         child: Container(
           width: 327.0,
           height: 52.0,
