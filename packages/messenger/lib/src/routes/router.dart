@@ -42,5 +42,11 @@ final GoRouter router = GoRouter(
         ),
       ],
     ),
+    GoRoute(
+      path: RoutePath.contacts,
+      builder: (BuildContext context, GoRouterState state) {
+        return const ContactsPage();
+      },
+    ),
   ],
 );
