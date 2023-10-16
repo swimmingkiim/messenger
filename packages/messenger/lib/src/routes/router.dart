@@ -33,6 +33,13 @@ final GoRouter router = GoRouter(
             return const VerificationPinNumberPage();
           },
         ),
+        GoRoute(
+          path: RoutePath.walkthroughProfileAccount
+              .replaceFirst('${RoutePath.walkthrough}/', ''),
+          builder: (BuildContext context, GoRouterState state) {
+            return const ProfileAccountPage();
+          },
+        ),
       ],
     ),
   ],
