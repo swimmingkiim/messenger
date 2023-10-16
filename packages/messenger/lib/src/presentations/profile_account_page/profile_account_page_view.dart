@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 
 // packages
-import 'package:flag/flag.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
@@ -179,7 +178,7 @@ class ProfileAccountPageView extends StatelessWidget {
   Widget buildSaveButton() {
     return Builder(builder: (BuildContext context) {
       return InkWell(
-        onTap: () => context.push(RoutePath.walkthroughVerificationPinNumber),
+        onTap: () => context.push(RoutePath.contacts),
         child: Container(
           width: 327.0,
           height: 52.0,
