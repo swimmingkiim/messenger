@@ -8,6 +8,9 @@ import 'package:go_router/go_router.dart';
 // routes
 import 'package:messenger/src/routes/routes.dart';
 
+// widgets
+import 'package:messenger/src/presentations/widgets/widgets.dart';
+
 // themes
 import 'package:messenger/src/themes/themes.dart';
 
@@ -19,6 +22,7 @@ class ContactsPageView extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(),
       body: buildBody(),
+      bottomNavigationBar: DefaultBottomNavigationBar(),
     );
   }
 
