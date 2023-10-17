@@ -22,7 +22,7 @@ class ChatsPageView extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(),
       body: buildBody(),
-      bottomNavigationBar: DefaultBottomNavigationBar(),
+      bottomNavigationBar: const DefaultBottomNavigationBar(),
     );
   }
 
