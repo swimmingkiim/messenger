@@ -87,7 +87,6 @@ class ContactsPageView extends StatelessWidget {
             ),
           ),
           child: TextField(
-            keyboardType: const TextInputType.numberWithOptions(),
             textAlignVertical: TextAlignVertical.center,
             decoration: InputDecoration(
               prefixIcon: SvgPicture.asset(
