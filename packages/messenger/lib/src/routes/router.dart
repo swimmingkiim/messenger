@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 // pages
-import 'package:messenger/src/presentations/pages.dart';
+import 'package:messenger/src/presentations/pages/pages.dart';
 
 // routes
 import 'route_path.dart';
