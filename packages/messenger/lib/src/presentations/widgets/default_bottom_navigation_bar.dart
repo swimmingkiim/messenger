@@ -33,9 +33,24 @@ class DefaultBottomNavigationBar extends StatelessWidget {
       showSelectedLabels: false,
       showUnselectedLabels: false,
       currentIndex: getCurrentIndex(
-        GoRouter.of(context).routerDelegate.currentConfiguration.fullPath,
+        GoRouterState.of(context).path ?? RoutePath.contacts,
       ),
       backgroundColor: DefaultTheme.neutralWhite,
+      onTap: (int index) {
+        switch (index) {
+          case 0:
+            context.push(RoutePath.contacts);
+            break;
+          case 1:
+            context.push(RoutePath.chats);
+            break;
+          case 2:
+            context.push(RoutePath.more);
+            break;
+          default:
+            break;
+        }
+      },
       items: [
         buildBottomNavigationBarItem(
           context: context,
@@ -67,18 +82,15 @@ class DefaultBottomNavigationBar extends StatelessWidget {
   }) {
     return BottomNavigationBarItem(
       label: label,
-      icon: InkWell(
-        onTap: () => context.push(navigateTo),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 13.0,
-            vertical: 6.0,
-          ),
-          child: SvgPicture.asset(
-            iconPath,
-            width: 32.0,
-            height: 32.0,
-          ),
+      icon: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 13.0,
+          vertical: 6.0,
+        ),
+        child: SvgPicture.asset(
+          iconPath,
+          width: 32.0,
+          height: 32.0,
         ),
       ),
       activeIcon: SizedBox(
