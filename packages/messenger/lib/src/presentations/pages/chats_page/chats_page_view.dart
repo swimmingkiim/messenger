@@ -34,7 +34,11 @@ class ChatsPageView extends StatelessWidget {
       automaticallyImplyLeading: false,
       title: buildAppBarTitle(),
       actions: [
-        buildAddFriendButton(),
+        buildAddChatButton(),
+        const SizedBox(
+          width: 8.0,
+        ),
+        buildReadAllNotificationsButton(),
         const SizedBox(
           width: 24.0,
         ),
@@ -58,11 +62,22 @@ class ChatsPageView extends StatelessWidget {
     );
   }
 
-  Widget buildAddFriendButton() {
+  Widget buildAddChatButton() {
     return InkWell(
       onTap: () {},
       child: SvgPicture.asset(
-        'assets/icons/plus.svg',
+        'assets/icons/message_plus_alt.svg',
+        width: 24.0,
+        height: 24.0,
+      ),
+    );
+  }
+
+  Widget buildReadAllNotificationsButton() {
+    return InkWell(
+      onTap: () {},
+      child: SvgPicture.asset(
+        'assets/icons/list_check.svg',
         width: 24.0,
         height: 24.0,
       ),
@@ -96,7 +111,7 @@ class ChatsPageView extends StatelessWidget {
                 colorFilter: const ColorFilter.mode(
                     DefaultTheme.neutralDisabled, BlendMode.srcIn),
               ),
-              hintText: 'Search',
+              hintText: 'Search by name',
               hintStyle: DefaultTheme.textTheme.bodyLarge!.copyWith(
                 color: DefaultTheme.neutralDisabled,
               ),
@@ -109,10 +124,10 @@ class ChatsPageView extends StatelessWidget {
   }
 
   Widget buildBody() {
-    return buildFriendsList();
+    return buildChatsList();
   }
 
-  Widget buildFriendsList() {
+  Widget buildChatsList() {
     return ListView.separated(
       shrinkWrap: true,
       padding: const EdgeInsets.only(
@@ -124,12 +139,14 @@ class ChatsPageView extends StatelessWidget {
         return Container(
           height: 68.0,
           padding: const EdgeInsets.only(bottom: 12.0),
-          child: buildFriendsListItem(
+          child: buildChatsListItem(
             name: 'Athalia Putri',
-            description: 'Last seen yesterday',
+            description: 'Hello!',
             profileImageUrl:
                 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
             isOnline: true,
+            lastMessagedDateString: '17/6',
+            unreadMessageCount: 1,
           ),
         );
       },
@@ -143,11 +160,13 @@ class ChatsPageView extends StatelessWidget {
     );
   }
 
-  Widget buildFriendsListItem({
+  Widget buildChatsListItem({
     required String name,
     required String description,
     required String profileImageUrl,
     required bool isOnline,
+    required String lastMessagedDateString,
+    required int unreadMessageCount,
   }) {
     return Row(
       mainAxisSize: MainAxisSize.max,
@@ -209,6 +228,46 @@ class ChatsPageView extends StatelessWidget {
                 color: DefaultTheme.neutralDisabled,
               ),
               textAlign: TextAlign.left,
+            ),
+            const SizedBox(
+              width: 10.0,
+            ),
+          ],
+        ),
+        const Spacer(),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Text(
+              lastMessagedDateString,
+              style: DefaultTheme.textTheme.labelMedium!.copyWith(
+                color: DefaultTheme.neutralWeak,
+              ),
+              textAlign: TextAlign.left,
+            ),
+            const SizedBox(
+              width: 10.0,
+            ),
+            Container(
+              height: 16.0,
+              alignment: Alignment.center,
+              padding: const EdgeInsets.symmetric(
+                horizontal: 8.0,
+                vertical: 2.0,
+              ),
+              decoration: const BoxDecoration(
+                color: DefaultTheme.brandBackground,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(40.0),
+                ),
+              ),
+              child: Text(
+                '$unreadMessageCount',
+                style: DefaultTheme.textTheme.labelSmall!.copyWith(
+                  color: DefaultTheme.brandDark,
+                ),
+                textAlign: TextAlign.left,
+              ),
             ),
             const SizedBox(
               width: 10.0,
