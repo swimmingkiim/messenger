@@ -54,5 +54,11 @@ final GoRouter router = GoRouter(
         return const ChatsPage();
       },
     ),
+    GoRoute(
+      path: RoutePath.more,
+      builder: (BuildContext context, GoRouterState state) {
+        return const MorePage();
+      },
+    ),
   ],
 );
