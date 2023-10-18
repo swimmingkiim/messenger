@@ -140,47 +140,81 @@ class ChatPageView extends StatelessWidget {
 
   Widget buildBody() {
     return Container(
+      height: double.maxFinite,
       color: DefaultTheme.neutralLine,
       child: buildChatList(),
     );
   }
 
   Widget buildChatList() {
-    return ListView.separated(
+    return ListView(
       shrinkWrap: true,
       padding: const EdgeInsets.symmetric(
         vertical: 20.0,
         horizontal: 16.0,
       ),
-      itemBuilder: (BuildContext context, int index) {
-        return Padding(
-          padding: const EdgeInsets.only(bottom: 12.0),
-          child: buildOthersChatListItem(
-            name: 'Athalia Putri',
-            profileImageUrl:
-                'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
-            texts: [
-              'hello',
-              'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
-            ],
-            mediaUrls: [
+      children: [
+        buildOthersChatListItem(
+          name: 'Athalia Putri',
+          profileImageUrl:
               'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
-            ],
-            repliedToWho: 'swimmingkiim',
-            repliedToText:
-                'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
-            repliedText: 'hello back!',
-            sendAt: DateTime.now(),
-            unreadCount: 1,
-          ),
-        );
-      },
-      separatorBuilder: (BuildContext context, int index) {
-        return const SizedBox(
-          height: 12.0,
-        );
-      },
-      itemCount: 30,
+          text: 'hello',
+          // mediaUrl:
+          //     'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
+          // repliedToWho: 'swimmingkiim',
+          // repliedToText:
+          //     'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+          // repliedText: 'hello back!',
+          sendAt: DateTime.now(),
+          unreadCount: 1,
+          onlyShowBubble: false,
+        ),
+        buildOthersChatListItem(
+          name: 'Athalia Putri',
+          profileImageUrl:
+              'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
+          // text: 'hello',
+          mediaUrl:
+              'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
+          // repliedToWho: 'swimmingkiim',
+          // repliedToText:
+          //     'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+          // repliedText: 'hello back!',
+          sendAt: DateTime.now(),
+          unreadCount: 1,
+          onlyShowBubble: true,
+        ),
+        buildOthersChatListItem(
+          name: 'Athalia Putri',
+          profileImageUrl:
+              'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
+          // text: 'hello',
+          // mediaUrl:
+          //     'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
+          repliedToWho: 'swimmingkiim',
+          repliedToText:
+              'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+          repliedText: 'hello back!',
+          sendAt: DateTime.now(),
+          unreadCount: 1,
+          onlyShowBubble: true,
+        ),
+        buildOthersChatListItem(
+          name: 'Athalia Putri',
+          profileImageUrl:
+              'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
+          text: 'hello',
+          // mediaUrl:
+          //     'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
+          // repliedToWho: 'swimmingkiim',
+          // repliedToText:
+          //     'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+          // repliedText: 'hello back!',
+          sendAt: DateTime.now(),
+          unreadCount: 1,
+          onlyShowBubble: false,
+        ),
+      ],
     );
   }
 
@@ -189,8 +223,9 @@ class ChatPageView extends StatelessWidget {
     required String profileImageUrl,
     required DateTime sendAt,
     required int unreadCount,
-    List<String>? texts,
-    List<String>? mediaUrls,
+    bool onlyShowBubble = false,
+    String? text,
+    String? mediaUrl,
     String? repliedToWho,
     String? repliedToText,
     String? repliedText,
@@ -199,84 +234,91 @@ class ChatPageView extends StatelessWidget {
       mainAxisSize: MainAxisSize.max,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Stack(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(
-                right: 4.0,
-              ),
-              child: ClipRRect(
-                borderRadius: const BorderRadius.all(
-                  Radius.circular(50.0),
+        if (onlyShowBubble)
+          const SizedBox(
+            width: 40.0,
+          )
+        else
+          Stack(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(
+                  right: 4.0,
                 ),
-                child: Image.network(
-                  profileImageUrl,
-                  width: 36.0,
-                  height: 36.0,
-                  fit: BoxFit.cover,
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(50.0),
+                  ),
+                  child: Image.network(
+                    profileImageUrl,
+                    width: 36.0,
+                    height: 36.0,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
-            ),
-          ],
-        ),
+            ],
+          ),
         const SizedBox(
           width: 12.0,
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              name,
-              style: DefaultTheme.textTheme.bodyLarge!.copyWith(
-                color: DefaultTheme.neutralActive,
+            if (onlyShowBubble)
+              const SizedBox.shrink()
+            else
+              Text(
+                name,
+                style: DefaultTheme.textTheme.bodyLarge!.copyWith(
+                  color: DefaultTheme.neutralActive,
+                ),
+                textAlign: TextAlign.left,
               ),
-              textAlign: TextAlign.left,
-            ),
             const SizedBox(
               height: 5.0,
             ),
-            if (mediaUrls != null)
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: mediaUrls
-                    .map((String url) => buildOthersMediaChatBubble(url))
-                    .toList(),
-              ),
-            if (texts != null)
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: texts
-                    .map((String text) => buildOthersTextChatBubble(text))
-                    .toList(),
-              ),
-            if (repliedToWho != null &&
-                repliedToText != null &&
-                repliedText != null)
-              buildOthersReplayChatBubble(
-                repliedToWho: repliedToWho,
-                repliedToText: repliedToText,
-                repliedText: repliedText,
-              ),
             Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text(
-                  '${sendAt.hour}:${sendAt.minute} ${sendAt.isAfter(sendAt.copyWith(hour: 12, minute: 0)) ? 'PM' : 'AM'}',
-                  style: DefaultTheme.textTheme.labelLarge!.copyWith(
-                    color: DefaultTheme.neutralDisabled,
+                if (mediaUrl != null)
+                  buildOthersMediaChatBubble(mediaUrl)
+                else if (text != null)
+                  buildOthersTextChatBubble(text)
+                else if (repliedToWho != null &&
+                    repliedToText != null &&
+                    repliedText != null)
+                  buildOthersReplayChatBubble(
+                    repliedToWho: repliedToWho,
+                    repliedToText: repliedToText,
+                    repliedText: repliedText,
                   ),
-                  textAlign: TextAlign.left,
+                const SizedBox(
+                  width: 10.0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  child: Text(
+                    '${sendAt.hour}:${sendAt.minute} ${sendAt.isAfter(sendAt.copyWith(hour: 12, minute: 0)) ? 'PM' : 'AM'}',
+                    style: DefaultTheme.textTheme.labelLarge!.copyWith(
+                      color: DefaultTheme.neutralDisabled,
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
                 ),
                 const SizedBox(
                   width: 10.0,
                 ),
                 if (unreadCount > 0)
-                  Text(
-                    '$unreadCount',
-                    style: DefaultTheme.textTheme.labelSmall!.copyWith(
-                      color: DefaultTheme.brandDefault,
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8.0),
+                    child: Text(
+                      '$unreadCount',
+                      style: DefaultTheme.textTheme.labelSmall!.copyWith(
+                        color: DefaultTheme.brandDefault,
+                      ),
+                      textAlign: TextAlign.left,
                     ),
-                    textAlign: TextAlign.left,
                   ),
               ],
             ),
@@ -292,7 +334,7 @@ class ChatPageView extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       margin: const EdgeInsets.only(bottom: 5.0),
       constraints: const BoxConstraints(
-        maxWidth: 337.0,
+        maxWidth: 260.0,
       ),
       decoration: const BoxDecoration(
         color: DefaultTheme.neutralWhite,
@@ -317,7 +359,7 @@ class ChatPageView extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       margin: const EdgeInsets.only(bottom: 5.0),
       constraints: const BoxConstraints(
-        maxWidth: 337.0,
+        maxWidth: 260.0,
       ),
       decoration: const BoxDecoration(
         color: DefaultTheme.neutralWhite,
@@ -348,7 +390,7 @@ class ChatPageView extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       margin: const EdgeInsets.only(bottom: 5.0),
       constraints: const BoxConstraints(
-        maxWidth: 337.0,
+        maxWidth: 260.0,
       ),
       decoration: const BoxDecoration(
         color: DefaultTheme.neutralWhite,
@@ -380,7 +422,7 @@ class ChatPageView extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.all(8.0),
                       constraints: const BoxConstraints(
-                        maxWidth: 300.0,
+                        maxWidth: 235.0,
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
