@@ -142,7 +142,12 @@ class ChatPageView extends StatelessWidget {
     return Container(
       height: double.maxFinite,
       color: DefaultTheme.neutralLine,
-      child: buildChatList(),
+      child: Column(children: [
+        Expanded(
+          child: buildChatList(),
+        ),
+        buildChatInputBox(),
+      ]),
     );
   }
 
@@ -757,6 +762,80 @@ class ChatPageView extends StatelessWidget {
             textAlign: TextAlign.left,
           ),
         ],
+      ),
+    );
+  }
+
+  Widget buildChatInputBox() {
+    return Container(
+      width: double.maxFinite,
+      height: 83.46,
+      color: DefaultTheme.neutralWhite,
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 12.0,
+          vertical: 10.0,
+        ),
+        margin: const EdgeInsets.only(
+          bottom: 27.46,
+        ),
+        child: Row(
+          children: [
+            SvgPicture.asset(
+              'assets/icons/plus.svg',
+              width: 24.0,
+              height: 24.0,
+              colorFilter: const ColorFilter.mode(
+                DefaultTheme.neutralDisabled,
+                BlendMode.srcIn,
+              ),
+            ),
+            const SizedBox(
+              width: 12.0,
+            ),
+            Flexible(
+              child: Container(
+                width: double.maxFinite,
+                height: 36.0,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 8.0,
+                  vertical: 6.0,
+                ),
+                decoration: const BoxDecoration(
+                  color: DefaultTheme.neutralOffWhite,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4.0),
+                  ),
+                ),
+                child: buildChatInputField(),
+              ),
+            ),
+            const SizedBox(
+              width: 12.0,
+            ),
+            SvgPicture.asset(
+              'assets/icons/send-alt-filled.svg',
+              width: 24.0,
+              height: 24.0,
+              colorFilter: const ColorFilter.mode(
+                DefaultTheme.brandDefault,
+                BlendMode.srcIn,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildChatInputField() {
+    return TextField(
+      decoration: InputDecoration(
+        hintText: 'Type Message',
+        hintStyle: DefaultTheme.textTheme.bodyLarge!.copyWith(
+          color: DefaultTheme.neutralDisabled,
+        ),
+        border: InputBorder.none,
       ),
     );
   }
