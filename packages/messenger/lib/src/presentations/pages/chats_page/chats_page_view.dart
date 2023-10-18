@@ -139,14 +139,20 @@ class ChatsPageView extends StatelessWidget {
         return Container(
           height: 68.0,
           padding: const EdgeInsets.only(bottom: 12.0),
-          child: buildChatsListItem(
-            name: 'Athalia Putri',
-            description: 'Hello!',
-            profileImageUrl:
-                'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
-            isOnline: true,
-            lastMessagedDateString: '17/6',
-            unreadMessageCount: 1,
+          child: InkWell(
+            // TODO: Replace with real chat ID
+            onTap: () => context.push(
+              RoutePath.chat.replaceAll(':chatId', '123'),
+            ),
+            child: buildChatsListItem(
+              name: 'Athalia Putri',
+              description: 'Hello!',
+              profileImageUrl:
+                  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
+              isOnline: true,
+              lastMessagedDateString: '17/6',
+              unreadMessageCount: 1,
+            ),
           ),
         );
       },
