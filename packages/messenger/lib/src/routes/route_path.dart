@@ -9,5 +9,5 @@ class RoutePath {
   static const String contacts = '/contacts';
   static const String chats = '/chats';
   static const String more = '/more';
-  static const String chatRoom = '/chat/:chatId';
+  static const String chat = '/chat/:chatId';
 }
