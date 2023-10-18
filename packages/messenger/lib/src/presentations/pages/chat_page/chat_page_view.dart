@@ -199,11 +199,99 @@ class ChatPageView extends StatelessWidget {
           unreadCount: 1,
           onlyShowBubble: true,
         ),
+        buildMyChatListItem(
+          text: 'hello',
+          // mediaUrl:
+          //     'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
+          // repliedToWho: 'swimmingkiim',
+          // repliedToText:
+          //     'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+          // repliedText: 'hello back!',
+          sendAt: DateTime.now(),
+          unreadCount: 1,
+          onlyShowBubble: false,
+        ),
+        buildMyChatListItem(
+          // text: 'hello',
+          mediaUrl:
+              'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
+          // repliedToWho: 'swimmingkiim',
+          // repliedToText:
+          //     'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+          // repliedText: 'hello back!',
+          sendAt: DateTime.now(),
+          unreadCount: 1,
+          onlyShowBubble: true,
+        ),
+        buildMyChatListItem(
+          // text: 'hello',
+          // mediaUrl:
+          //     'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
+          repliedToWho: 'swimmingkiim',
+          repliedToText:
+              'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+          repliedText: 'hello back!',
+          sendAt: DateTime.now(),
+          unreadCount: 1,
+          onlyShowBubble: true,
+        ),
         buildOthersChatListItem(
           name: 'Athalia Putri',
           profileImageUrl:
               'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
           text: 'hello',
+          // mediaUrl:
+          //     'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
+          // repliedToWho: 'swimmingkiim',
+          // repliedToText:
+          //     'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+          // repliedText: 'hello back!',
+          sendAt: DateTime.now(),
+          unreadCount: 1,
+          onlyShowBubble: false,
+        ),
+        buildOthersChatListItem(
+          name: 'Athalia Putri',
+          profileImageUrl:
+              'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
+          text: 'How r u?',
+          // mediaUrl:
+          //     'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
+          // repliedToWho: 'swimmingkiim',
+          // repliedToText:
+          //     'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+          // repliedText: 'hello back!',
+          sendAt: DateTime.now(),
+          unreadCount: 1,
+          onlyShowBubble: false,
+        ),
+        buildMyChatListItem(
+          // text: 'hello',
+          // mediaUrl:
+          //     'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
+          repliedToWho: 'Athalia Putri',
+          repliedToText: 'How r u?',
+          repliedText: 'Fine, Thank you, and you?',
+          sendAt: DateTime.now(),
+          unreadCount: 1,
+          onlyShowBubble: false,
+        ),
+        buildOthersChatListItem(
+          name: 'Athalia Putri',
+          profileImageUrl:
+              'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
+          text: 'hmmmmm.....',
+          // mediaUrl:
+          //     'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
+          // repliedToWho: 'Athalia Putri',
+          // repliedToText: 'How r u?',
+          // repliedText: 'Fine, Thank you, and you?',
+          sendAt: DateTime.now(),
+          unreadCount: 1,
+          onlyShowBubble: false,
+        ),
+        buildMyChatListItem(
+          text: 'What\'s wrong?',
           // mediaUrl:
           //     'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80',
           // repliedToWho: 'swimmingkiim',
@@ -459,6 +547,212 @@ class ChatPageView extends StatelessWidget {
             repliedText,
             style: DefaultTheme.textTheme.bodyMedium!.copyWith(
               color: DefaultTheme.neutralActive,
+            ),
+            textAlign: TextAlign.left,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget buildMyChatListItem({
+    required DateTime sendAt,
+    required int unreadCount,
+    bool onlyShowBubble = false,
+    String? text,
+    String? mediaUrl,
+    String? repliedToWho,
+    String? repliedToText,
+    String? repliedText,
+  }) {
+    return Row(
+      mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                if (unreadCount > 0)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8.0),
+                    child: Text(
+                      '$unreadCount',
+                      style: DefaultTheme.textTheme.labelSmall!.copyWith(
+                        color: DefaultTheme.brandDefault,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                  ),
+                const SizedBox(
+                  width: 10.0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  child: Text(
+                    '${sendAt.hour}:${sendAt.minute} ${sendAt.isAfter(sendAt.copyWith(hour: 12, minute: 0)) ? 'PM' : 'AM'}',
+                    style: DefaultTheme.textTheme.labelLarge!.copyWith(
+                      color: DefaultTheme.neutralDisabled,
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                ),
+                const SizedBox(
+                  width: 10.0,
+                ),
+                if (mediaUrl != null)
+                  buildMyMediaChatBubble(mediaUrl)
+                else if (text != null)
+                  buildMyTextChatBubble(text)
+                else if (repliedToWho != null &&
+                    repliedToText != null &&
+                    repliedText != null)
+                  buildMyReplayChatBubble(
+                    repliedToWho: repliedToWho,
+                    repliedToText: repliedToText,
+                    repliedText: repliedText,
+                  ),
+              ],
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget buildMyTextChatBubble(String text) {
+    return Container(
+      padding: const EdgeInsets.all(10.0),
+      margin: const EdgeInsets.only(bottom: 5.0),
+      constraints: const BoxConstraints(
+        maxWidth: 260.0,
+      ),
+      decoration: const BoxDecoration(
+        color: DefaultTheme.brandDefault,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(16.0),
+          topRight: Radius.circular(16.0),
+          bottomLeft: Radius.circular(16.0),
+        ),
+      ),
+      child: Text(
+        text,
+        style: DefaultTheme.textTheme.bodyMedium!.copyWith(
+          color: DefaultTheme.neutralWhite,
+        ),
+        textAlign: TextAlign.left,
+      ),
+    );
+  }
+
+  Widget buildMyMediaChatBubble(String url) {
+    return Container(
+      padding: const EdgeInsets.all(10.0),
+      margin: const EdgeInsets.only(bottom: 5.0),
+      constraints: const BoxConstraints(
+        maxWidth: 260.0,
+      ),
+      decoration: const BoxDecoration(
+        color: DefaultTheme.brandDefault,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(16.0),
+          topRight: Radius.circular(16.0),
+          bottomLeft: Radius.circular(16.0),
+        ),
+      ),
+      child: ClipRRect(
+        borderRadius: const BorderRadius.all(
+          Radius.circular(4.0),
+        ),
+        child: Image.network(
+          url,
+          fit: BoxFit.scaleDown,
+        ),
+      ),
+    );
+  }
+
+  Widget buildMyReplayChatBubble({
+    required String repliedToWho,
+    required String repliedToText,
+    required String repliedText,
+  }) {
+    return Container(
+      padding: const EdgeInsets.all(10.0),
+      margin: const EdgeInsets.only(bottom: 5.0),
+      constraints: const BoxConstraints(
+        maxWidth: 260.0,
+      ),
+      decoration: const BoxDecoration(
+        color: DefaultTheme.brandDefault,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(16.0),
+          topRight: Radius.circular(16.0),
+          bottomLeft: Radius.circular(16.0),
+        ),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ClipRRect(
+            borderRadius: const BorderRadius.all(
+              Radius.circular(4.0),
+            ),
+            child: Container(
+              color: DefaultTheme.brandDarkMode,
+              child: IntrinsicHeight(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Container(
+                      width: 4.0,
+                      color: DefaultTheme.neutralWhite,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(8.0),
+                      constraints: const BoxConstraints(
+                        maxWidth: 235.0,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            repliedToWho,
+                            style: DefaultTheme.textTheme.bodyMedium!.copyWith(
+                              color: DefaultTheme.neutralWhite,
+                            ),
+                            textAlign: TextAlign.left,
+                          ),
+                          const SizedBox(
+                            height: 4.0,
+                          ),
+                          Text(
+                            repliedToText,
+                            style: DefaultTheme.textTheme.bodyMedium!.copyWith(
+                              color: DefaultTheme.neutralWhite,
+                            ),
+                            textAlign: TextAlign.left,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 4.0,
+          ),
+          Text(
+            repliedText,
+            style: DefaultTheme.textTheme.bodyMedium!.copyWith(
+              color: DefaultTheme.neutralWhite,
             ),
             textAlign: TextAlign.left,
           ),
