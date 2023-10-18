@@ -1,3 +1,4 @@
+export 'chat_page/chat_page.dart';
 export 'chats_page/chats_page.dart';
 export 'contacts_page/contacts_page.dart';
 export 'more_page/more_page.dart';
