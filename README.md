@@ -4,6 +4,14 @@ Messenger App UI with Flutter
 
 Inspired by [Chateo UI Kit - Messenger App](https://www.figma.com/community/file/980835105690634391) design.
 
+## How to run
+```bash
+git clone https://github.com/swimmingkiim/messenger.git
+cd messenger/messenger
+flutter pub get
+flutter run # with desired device
+```
+
 ## Screenshots
 ### Walkthrough
 ![screenshot_walkthrough](https://github.com/swimmingkiim/messenger/blob/main/packages/messenger_etc/screenshots/screenshot_1.png?raw=true)
