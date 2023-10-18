@@ -12,6 +12,11 @@ flutter pub get
 flutter run # with desired device
 ```
 
+## Notices
+- This UI implementation version of [Chateo UI Kit - Messenger App](https://www.figma.com/community/file/980835105690634391) design. There's a bit different parts though.(no custom keyboard UI, no file, audio chat UI) This version is under MIT license. Feel free to use :)
+- Since it's a UI implementation version, there're no working features.
+- I'll be working on full featured version with firebase. It'll be a paid version.
+
 ## Screenshots
 ### Walkthrough
 ![screenshot_walkthrough](https://github.com/swimmingkiim/messenger/blob/main/packages/messenger_etc/screenshots/screenshot_1.png?raw=true)
