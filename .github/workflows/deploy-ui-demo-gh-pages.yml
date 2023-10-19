@@ -1,4 +1,4 @@
-name: Deploy UI demo gh-pages
+name: Deploy Messenger App UI demo gh-pages
 
 on:
   push:
