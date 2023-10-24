@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
+// routes
+import 'package:messenger/src/routes/routes.dart';
+
 // themes
 import 'package:messenger/src/themes/themes.dart';
 
@@ -60,7 +63,12 @@ class ChatPageView extends StatelessWidget {
       return InkWell(
         onTap: () {
           FocusScope.of(context).unfocus();
-          context.pop();
+          final isNavigationHistoryAlive = context.canPop();
+          if (isNavigationHistoryAlive) {
+            context.pop();
+          } else {
+            context.push(RoutePath.chats);
+          }
         },
         child: Container(
           width: 24.0,
