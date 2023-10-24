@@ -20,35 +20,30 @@ final GoRouter router = GoRouter(
           child: WalkthroughPage(),
         );
       },
-      routes: <RouteBase>[
-        GoRoute(
-          path: RoutePath.walkthroughVerificationPhoneNumber
-              .replaceFirst('${RoutePath.walkthrough}/', ''),
-          pageBuilder: (BuildContext context, GoRouterState state) {
-            return const NoTransitionPage(
-              child: VerificationPhoneNumberPage(),
-            );
-          },
-        ),
-        GoRoute(
-          path: RoutePath.walkthroughVerificationPinNumber
-              .replaceFirst('${RoutePath.walkthrough}/', ''),
-          pageBuilder: (BuildContext context, GoRouterState state) {
-            return const NoTransitionPage(
-              child: VerificationPinNumberPage(),
-            );
-          },
-        ),
-        GoRoute(
-          path: RoutePath.walkthroughProfileAccount
-              .replaceFirst('${RoutePath.walkthrough}/', ''),
-          pageBuilder: (BuildContext context, GoRouterState state) {
-            return const NoTransitionPage(
-              child: ProfileAccountPage(),
-            );
-          },
-        ),
-      ],
+    ),
+    GoRoute(
+      path: RoutePath.walkthroughVerificationPhoneNumber,
+      pageBuilder: (BuildContext context, GoRouterState state) {
+        return const NoTransitionPage(
+          child: VerificationPhoneNumberPage(),
+        );
+      },
+    ),
+    GoRoute(
+      path: RoutePath.walkthroughVerificationPinNumber,
+      pageBuilder: (BuildContext context, GoRouterState state) {
+        return const NoTransitionPage(
+          child: VerificationPinNumberPage(),
+        );
+      },
+    ),
+    GoRoute(
+      path: RoutePath.walkthroughProfileAccount,
+      pageBuilder: (BuildContext context, GoRouterState state) {
+        return const NoTransitionPage(
+          child: ProfileAccountPage(),
+        );
+      },
     ),
     GoRoute(
       path: RoutePath.contacts,
