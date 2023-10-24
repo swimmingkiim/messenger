@@ -21,6 +21,7 @@ final GoRouter router = GoRouter(
         );
       },
     ),
+    // TODO: Redirect to walkthrough when user comes from url directly
     GoRoute(
       path: RoutePath.walkthroughVerificationPhoneNumber,
       pageBuilder: (BuildContext context, GoRouterState state) {
@@ -29,6 +30,7 @@ final GoRouter router = GoRouter(
         );
       },
     ),
+    // TODO: Redirect to walkthrough when user comes from url directly
     GoRoute(
       path: RoutePath.walkthroughVerificationPinNumber,
       pageBuilder: (BuildContext context, GoRouterState state) {
@@ -37,6 +39,7 @@ final GoRouter router = GoRouter(
         );
       },
     ),
+    // TODO: Redirect to walkthrough when user comes from url directly
     GoRoute(
       path: RoutePath.walkthroughProfileAccount,
       pageBuilder: (BuildContext context, GoRouterState state) {
