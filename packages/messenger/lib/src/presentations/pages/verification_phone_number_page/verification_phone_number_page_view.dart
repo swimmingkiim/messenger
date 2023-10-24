@@ -188,7 +188,7 @@ class VerificationPhoneNumberPageView extends StatelessWidget {
   Widget buildContinueButton() {
     return Builder(builder: (BuildContext context) {
       return InkWell(
-        onTap: () => context.push(RoutePath.walkthroughVerificationPinNumber),
+        onTap: () => context.go(RoutePath.walkthroughVerificationPinNumber),
         child: Container(
           width: 327.0,
           height: 52.0,

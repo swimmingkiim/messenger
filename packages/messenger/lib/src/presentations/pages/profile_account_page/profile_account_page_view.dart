@@ -178,7 +178,7 @@ class ProfileAccountPageView extends StatelessWidget {
   Widget buildSaveButton() {
     return Builder(builder: (BuildContext context) {
       return InkWell(
-        onTap: () => context.push(RoutePath.contacts),
+        onTap: () => context.go(RoutePath.contacts),
         child: Container(
           width: 327.0,
           height: 52.0,

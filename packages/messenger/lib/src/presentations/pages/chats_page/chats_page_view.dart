@@ -141,7 +141,7 @@ class ChatsPageView extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 12.0),
           child: InkWell(
             // TODO: Replace with real chat ID
-            onTap: () => context.push(
+            onTap: () => context.go(
               RoutePath.chat.replaceAll(':chatId', '123'),
             ),
             child: buildChatsListItem(

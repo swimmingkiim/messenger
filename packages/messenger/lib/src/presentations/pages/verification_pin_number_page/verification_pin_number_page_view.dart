@@ -329,7 +329,7 @@ class VerificationPinNumberPageView extends StatelessWidget {
     return Builder(builder: (BuildContext context) {
       return InkWell(
         // TODO: Replace with real resend action
-        onTap: () => context.push(RoutePath.walkthroughProfileAccount),
+        onTap: () => context.go(RoutePath.walkthroughProfileAccount),
         child: Container(
           width: 327.0,
           height: 52.0,

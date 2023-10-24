@@ -94,7 +94,7 @@ class WalkthroughPageView extends StatelessWidget {
   Widget buildStartMessagingButton() {
     return Builder(builder: (BuildContext context) {
       return InkWell(
-        onTap: () => context.push(RoutePath.walkthroughVerificationPhoneNumber),
+        onTap: () => context.go(RoutePath.walkthroughVerificationPhoneNumber),
         child: Container(
           width: 327.0,
           height: 52.0,
