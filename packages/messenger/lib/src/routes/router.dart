@@ -15,55 +15,71 @@ final GoRouter router = GoRouter(
   routes: <RouteBase>[
     GoRoute(
       path: RoutePath.walkthrough,
-      builder: (BuildContext context, GoRouterState state) {
-        return const WalkthroughPage();
+      pageBuilder: (BuildContext context, GoRouterState state) {
+        return const NoTransitionPage(
+          child: WalkthroughPage(),
+        );
       },
       routes: <RouteBase>[
         GoRoute(
           path: RoutePath.walkthroughVerificationPhoneNumber
               .replaceFirst('${RoutePath.walkthrough}/', ''),
-          builder: (BuildContext context, GoRouterState state) {
-            return const VerificationPhoneNumberPage();
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return const NoTransitionPage(
+              child: VerificationPhoneNumberPage(),
+            );
           },
         ),
         GoRoute(
           path: RoutePath.walkthroughVerificationPinNumber
               .replaceFirst('${RoutePath.walkthrough}/', ''),
-          builder: (BuildContext context, GoRouterState state) {
-            return const VerificationPinNumberPage();
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return const NoTransitionPage(
+              child: VerificationPinNumberPage(),
+            );
           },
         ),
         GoRoute(
           path: RoutePath.walkthroughProfileAccount
               .replaceFirst('${RoutePath.walkthrough}/', ''),
-          builder: (BuildContext context, GoRouterState state) {
-            return const ProfileAccountPage();
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return const NoTransitionPage(
+              child: ProfileAccountPage(),
+            );
           },
         ),
       ],
     ),
     GoRoute(
       path: RoutePath.contacts,
-      builder: (BuildContext context, GoRouterState state) {
-        return const ContactsPage();
+      pageBuilder: (BuildContext context, GoRouterState state) {
+        return const NoTransitionPage(
+          child: ContactsPage(),
+        );
       },
     ),
     GoRoute(
       path: RoutePath.chats,
-      builder: (BuildContext context, GoRouterState state) {
-        return const ChatsPage();
+      pageBuilder: (BuildContext context, GoRouterState state) {
+        return const NoTransitionPage(
+          child: ChatsPage(),
+        );
       },
     ),
     GoRoute(
       path: RoutePath.more,
-      builder: (BuildContext context, GoRouterState state) {
-        return const MorePage();
+      pageBuilder: (BuildContext context, GoRouterState state) {
+        return const NoTransitionPage(
+          child: MorePage(),
+        );
       },
     ),
     GoRoute(
       path: RoutePath.chat,
-      builder: (BuildContext context, GoRouterState state) {
-        return const ChatPage();
+      pageBuilder: (BuildContext context, GoRouterState state) {
+        return const NoTransitionPage(
+          child: ChatPage(),
+        );
       },
     ),
   ],
