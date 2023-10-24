@@ -39,13 +39,13 @@ class DefaultBottomNavigationBar extends StatelessWidget {
       onTap: (int index) {
         switch (index) {
           case 0:
-            context.go(RoutePath.contacts);
+            context.push(RoutePath.contacts);
             break;
           case 1:
-            context.go(RoutePath.chats);
+            context.push(RoutePath.chats);
             break;
           case 2:
-            context.go(RoutePath.more);
+            context.push(RoutePath.more);
             break;
           default:
             break;
