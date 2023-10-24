@@ -427,7 +427,7 @@ class ChatPageView extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       margin: const EdgeInsets.only(bottom: 5.0),
       constraints: const BoxConstraints(
-        maxWidth: 260.0,
+        maxWidth: 215.0,
       ),
       decoration: const BoxDecoration(
         color: DefaultTheme.neutralWhite,
@@ -452,7 +452,7 @@ class ChatPageView extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       margin: const EdgeInsets.only(bottom: 5.0),
       constraints: const BoxConstraints(
-        maxWidth: 260.0,
+        maxWidth: 215.0,
       ),
       decoration: const BoxDecoration(
         color: DefaultTheme.neutralWhite,
@@ -483,7 +483,7 @@ class ChatPageView extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       margin: const EdgeInsets.only(bottom: 5.0),
       constraints: const BoxConstraints(
-        maxWidth: 260.0,
+        maxWidth: 215.0,
       ),
       decoration: const BoxDecoration(
         color: DefaultTheme.neutralWhite,
@@ -515,7 +515,7 @@ class ChatPageView extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.all(8.0),
                       constraints: const BoxConstraints(
-                        maxWidth: 235.0,
+                        maxWidth: 190.0,
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -633,7 +633,7 @@ class ChatPageView extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       margin: const EdgeInsets.only(bottom: 5.0),
       constraints: const BoxConstraints(
-        maxWidth: 260.0,
+        maxWidth: 215.0,
       ),
       decoration: const BoxDecoration(
         color: DefaultTheme.brandDefault,
@@ -658,7 +658,7 @@ class ChatPageView extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       margin: const EdgeInsets.only(bottom: 5.0),
       constraints: const BoxConstraints(
-        maxWidth: 260.0,
+        maxWidth: 215.0,
       ),
       decoration: const BoxDecoration(
         color: DefaultTheme.brandDefault,
@@ -689,7 +689,7 @@ class ChatPageView extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       margin: const EdgeInsets.only(bottom: 5.0),
       constraints: const BoxConstraints(
-        maxWidth: 260.0,
+        maxWidth: 215.0,
       ),
       decoration: const BoxDecoration(
         color: DefaultTheme.brandDefault,
@@ -721,7 +721,7 @@ class ChatPageView extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.all(8.0),
                       constraints: const BoxConstraints(
-                        maxWidth: 235.0,
+                        maxWidth: 190.0,
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
