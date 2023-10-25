@@ -1,8 +1,9 @@
 name: Deploy Messenger App UI demo gh-pages
 
 on:
-  push:
-    branches: [main]
+  # TODO: Re-enable gh-pages deployment
+  # push:
+  #   branches: [main]
 
 jobs:
   build:
